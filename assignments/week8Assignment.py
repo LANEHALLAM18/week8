@@ -37,4 +37,9 @@ dnaSeq = input ("Please input your DNA sequence: ")
 print("")
 #the users sequence will be printed to the screen in all caps no matter the original individual letter case.
 dnaSeqUpper = dnaSeq.upper()
-print ("The input DNA sequence is:",(dnaSeqUpper))
+s = dnaSeqUpper
+
+print ("The input DNA sequence is: ")
+codonSeq = (" ".join(s[i: i + 3] for i in range(0, len(s), 3)))
+print (codonSeq)
+print (codonSeq.split())
