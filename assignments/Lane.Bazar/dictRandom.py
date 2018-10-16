@@ -56,6 +56,7 @@ rnaSeq = codonSeq.replace("T", "U")
 #Rna with no spaces
 rnaSeq2 = s.replace("T", "U")
 
+#if the usr chose option 1 this script print the rna sequence which is need in option one to determine the amino acids.
 if choice == "1": print ("RNA Sequence : ",(rnaSeq))
 print("")
 
@@ -80,7 +81,7 @@ codonDict = {"AAA":"Lys", "AAC":"Asn", "AAG":"Lys", "AAU":"Asn",
 		"UGA":"STOP", "UGC":"Cys", "UGG":"Trp", "UGU":"Cys", 
 		"UUA":"Leu", "UUC":"Phe", "UUG":"Leu", "UUU":"Phe"}
 
-# translating rna codons to amino acids
+# translating rna codons to amino acids if usr chose option 1 or picks a random codon if usr chose option 2.
 codon = [dnaSeqUpper[i:i+3] for i in range(0, len(dnaSeqUpper), 3)]
 
 if choice == "1":
