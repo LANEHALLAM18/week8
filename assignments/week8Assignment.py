@@ -51,7 +51,10 @@ codonSeq = (" ".join(s[i: i + 3] for i in range(0, len(s), 3)))
 #print (codonSeq)
 print ("The input DNA sequence is: ",(codonSeq.split()))
 print("")
+#Rna with spaces
 rnaSeq = codonSeq.replace("T", "U")
+#Rna with no spaces
+rnaSeq2 = s.replace("T", "U")
 
 if choice == "1": print ("RNA Sequence : ",(rnaSeq))
 print("")
@@ -79,14 +82,16 @@ codonDict = {"AAA":"Lys", "AAC":"Asn", "AAG":"Lys", "AAU":"Asn",
 
 # translating rna codons to amino acids
 codon = [dnaSeqUpper[i:i+3] for i in range(0, len(dnaSeqUpper), 3)]
-proteinSeq = ""
 
 if choice == "1":
-	for i in range(0, len(rnaSeq), 3):
-		if rnaSeq[i:i+3] in codonDict: proteinSeq += codonDict[rnaSeq[i:i+3]]
-	print("Protein sequence: ",(proteinSeq))
-	print("")
-	print("Your Test is Done!")
+	proteinSeq = ""
+	if len(rnaSeq2)%3 == 0:
+		for n in range(0, len(rnaSeq), 3):
+			if rnaSeq2[n:n+3] in codonDict:
+				proteinSeq += codonDict[rnaSeq2[n:n+3]]
+		print("Protein sequence: ",(proteinSeq))
+		print("")
+		print("Your Test is Done!")
 		
 else:
 	import random
