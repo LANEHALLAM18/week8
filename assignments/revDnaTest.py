@@ -22,3 +22,5 @@ for i in dnaSeqUpperRev:
 	elif(i == "C"): print("G", end = "")
 	elif(i == "G"): print("C", end = "")
 print ("")
+
+# DB: Excellent! Works well, is robust, clean, and well commented.

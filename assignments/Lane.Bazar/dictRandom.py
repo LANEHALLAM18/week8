@@ -101,8 +101,16 @@ else:
 	print("")
 	print("Your Test is Done!")
 
+# DB: Why are these lines down here? They don't seem to do anything meaningful.
 dnaSeqUpper = dnaSeq.upper()
 s = dnaSeqUpper
 codonSeq = (" ".join(s[i: i + 3] for i in range(0, len(s), 3)))
 codon = [dnaSeqUpper[i:i+3] for i in range(0, len(dnaSeqUpper), 3)]
 quit()
+
+# DB: Overall, very well done again. Everything works, is well commented, and well organized.
+#     I also like the user checks and dummyproofing that you included. The only comments I
+#     have are that there seems to be some leftover code at the bottom, and the structure
+#     could be improved a bit if you just used a single if...else statement for choices 1
+#     and 2. You could include all the relevant code for translation in the if section.
+
